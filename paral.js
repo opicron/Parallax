@@ -1,7 +1,7 @@
 if ( jQuery('.page-hero').length ) {
+  
   var disappearPos =  jQuery(window).height() - jQuery('.page-hero').offset().top;
   var imgWindowHeight= jQuery('.page-hero').height();
-  var imageHeight = 500;
   var originalPercentage = 0;
 
   var getBackgroundImageSize = function(el) {
@@ -27,7 +27,6 @@ if ( jQuery('.page-hero').length ) {
           getBackgroundImageSize(jQuery('.page-hero'))
               .then(function(size) {
                   scaledheight = (jQuery('.page-hero').width() / size.width) * size.height;
-                  console.log(scaledheight);
                   if (scaledheight > 500) {
 
                     if (originalPercentage == 0) {
